@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,200&display=swap" rel="stylesheet">
+        <script src="operations.js"></script>
+        <title>Calculator</title>
+    </head>
+    <body>
+        <!-- A primeira secção irá para o ecrã, onde vão aparecer os números e os resultados das contas, da direita para a esquerda -->
+        <section class="container">
+            <div class="calculator">
+                <form>
+                    <div class="display">
+                        <input type="text" name="currentdisplay">
+                    </div>
+                    <div>
+                        <input type="button" value="AC" onclick = "currentdisplay.value = '' ">
+                        <input type="button" value="C" onclick = "currentdisplay.value = currentdisplay.value.toString().slice(0, -1) ">
+                        <input type="button" value="%" onclick = "currentdisplay.value = currentdisplay.value/100 ">
+                        <input type="button" value="/" onclick = "currentdisplay.value += '/' ">
+                    </div>
+                    <div>
+                        <input type="button" value="7" onclick = "currentdisplay.value += '7' ">
+                        <input type="button" value="8" onclick = "currentdisplay.value += '8' ">
+                        <input type="button" value="9" onclick = "currentdisplay.value += '9' ">
+                        <input type="button" value="X" onclick = "currentdisplay.value += '*' ">
+                    </div>
+                    <div>
+                        <input type="button" value="4" onclick = "currentdisplay.value += '4' ">
+                        <input type="button" value="5" onclick = "currentdisplay.value += '5' ">
+                        <input type="button" value="6" onclick = "currentdisplay.value += '6' ">
+                        <input type="button" value="-" onclick = "currentdisplay.value += '-' ">
+                    </div>
+                    <div>
+                        <input type="button" value="1" onclick = "currentdisplay.value += '1' ">
+                        <input type="button" value="2" onclick = "currentdisplay.value += '2' ">
+                        <input type="button" value="3" onclick = "currentdisplay.value += '3' ">
+                        <input type="button" value="+" onclick = "currentdisplay.value += '+' ">
+                    </div>
+                    <div>
+                        <input type="button" value="0" onclick = "currentdisplay.value += '0' ">
+                        <input type="button" value="," onclick = "currentdisplay.value += ',' ">
+                        <input type="button" value="=" class="equal" onclick = "currentdisplay.value = eval(currentdisplay.value) ">
+                    </div>
+                </form>
+            </div>
+        </section>
+        <!-- 
+            <section class="secondcalculator">
+            <section class="display">
+                <section class="content">
+                    <section class="input"></section>
+                </section>
+            </section>
+            <section class="keys">
+            </section>
+        </section>
+    -->
+    </body>
+</html>
